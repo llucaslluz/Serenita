@@ -52,7 +52,7 @@ O objetivo é oferecer uma experiência encantadora e funcional para clientes qu
 
 ## 🗂️ Modelo de Dados Lógico (Simplificado)
 ```mermaid
-erDiagram
+
     CATEGORIAS ||--o{ PRODUTOS : possui
     PRODUTOS ||--o{ PEDIDOS : contem
     USUARIOS ||--o{ PEDIDOS : realiza
