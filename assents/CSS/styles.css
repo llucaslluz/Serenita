@@ -1,0 +1,359 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #ffeef8;
+    font-family: 'Poppins', 'Comic Sans MS', sans-serif;
+    color: #333;
+}
+
+/* Cabeçalho */
+header {
+    background-color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 4px dashed #f9b57a;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+header .logo img {
+    width: 120px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #e07a9d;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #a34772;
+    transform: scale(1.05);
+}
+
+nav .pedido {
+    background-color: #ffd6e8;
+    padding: 8px 16px;
+    border-radius: 20px;
+    border: 2px dashed #f9b57a;
+    transition: 0.3s;
+}
+
+nav .pedido:hover {
+    background-color: #f9b57a;
+    color: #fff;
+    transform: scale(1.05);
+}
+
+/* Banner */
+.banner {
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #fff8fc;
+    border-bottom: 4px dashed #fce38a;
+}
+
+.banner h1 {
+    font-size: 2.8rem;
+    color: #e07a9d;
+    margin-bottom: 30px;
+    animation: fadeInUp 1s ease;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.banner img {
+    width: 260px;
+    /* animation: float 3s ease-in-out infinite; */
+}
+
+@keyframes float {
+    0% { transform: translateY(0);}
+    50% { transform: translateY(-10px);}
+    100% { transform: translateY(0);}
+}
+
+/* Produtos */
+.produtos {
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.produtos h2 {
+    font-size: 2rem;
+    color: #a34772;
+    margin-bottom: 40px;
+}
+
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.card {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 25px;
+    border: 3px dashed #f9b57a;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.08);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 8px 8px 20px rgba(0,0,0,0.12);
+}
+
+.card img {
+    width: 120px;
+    margin-bottom: 10px;
+}
+
+.card h3 {
+    color: #e07a9d;
+    margin-bottom: 5px;
+}
+
+.card p {
+    color: #a34772;
+    font-weight: bold;
+}
+
+/* Sobre */
+.sobre {
+    padding: 60px 40px;
+    background-color: #fff8fc;
+    text-align: center;
+    border-top: 4px dashed #fce38a;
+}
+
+.sobre h2 {
+    font-size: 2rem;
+    color: #a34772;
+    margin-bottom: 20px;
+}
+
+.sobre p {
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+    color: #444;
+}
+
+/* Rodapé */
+footer {
+    background-color: #ffd6e8;
+    padding: 20px;
+    text-align: center;
+    border-top: 4px dashed #f9b57a;
+}
+
+footer p {
+    color: #a34772;
+}
+
+footer .social a {
+    color: #e07a9d;
+    text-decoration: none;
+    margin: 0 5px;
+}
+
+footer .social a:hover {
+    text-decoration: underline;
+}
+
+/* Cookies efeito */
+/* .cookie {
+    position: absolute;
+    font-size: 16px;
+    pointer-events: none;
+    z-index: 1000;
+    user-select: none;
+} */
+.cookie {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+    z-index: 1000;
+    user-select: none;
+}
+
+.cookie img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.particle {
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 999;
+    opacity: 0.8;
+}
+
+.decor {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.4;
+    pointer-events: none;
+    animation: flutuar 9s ease-in-out infinite;
+}
+
+/* Posições específicas */
+.estrela1 {
+    top: 140px;
+    right:10px;
+    width: 50px;
+    animation: rodar 25s linear infinite;
+}
+
+.flor1 {
+    bottom: 250px;
+    left: 120px;
+    width: 50px;
+    animation: rodar1 25s linear infinite;
+}
+
+.arco {
+    top: 150px;
+    left: 350px;
+    width: 50px;
+    animation: pendulo 10s ease-in-out infinite;
+}
+
+.estrela2 {
+    top: 590px;
+    right:30px;
+    width: 50px;
+    animation: rodar 25s linear infinite;
+}
+
+.flor2 {
+    bottom: 90px;
+    left: 20px;
+    width: 50px;
+    animation: rodar 25s linear infinite;
+}
+
+.cora {
+    top: 130px;
+    left: 40px;
+    width: 50px;
+}
+
+.estrela3 {
+    top: 570px;
+    right:450px;
+    width: 50px;
+    animation: rodar1 30s linear infinite;
+}
+
+.flor3 {
+    bottom: 90px;
+    left: 480px;
+    width: 40px;
+    
+}
+
+.cora1 {
+    top: 300px;
+    left: 540px;
+    width: 50px;
+
+}
+
+.traços2 {
+    top: 320px;
+    right:300px;
+    width: 70px;
+
+}
+
+.flor4 {
+    bottom: 200px;
+    left: 580px;
+    width: 50px;
+    
+}
+
+.rabisco1 {
+    top: 270px;
+    left: 40px;
+    width: 50px;
+    animation: rodar 6s linear infinite;
+}
+
+
+/* Animação de flutuar */
+@keyframes flutuar {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100px { transform: translateY(0); }
+}
+
+/* Animação de rotação */
+@keyframes rodar {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+@keyframes rodar1 {
+    from {
+        transform: rotate(360deg);
+    }
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+/* Animação 3D no eixo Y (vira como uma moeda) */
+
+    /* animation: girar3d 8s linear infinite;
+    transform-style: preserve-3d;
+@keyframes girar3d {
+    from {
+        transform: rotateY(0deg);
+    }
+    to {
+        transform: rotateY(360deg);
+    }
+} */
+
+/* Animação tipo pêndulo */
+@keyframes pendulo { 
+    0% { transform: rotate(0deg); }
+    25% { transform: rotate(15deg); }
+    50% { transform: rotate(0deg); }
+    75% { transform: rotate(-15deg); }
+    100% { transform: rotate(0deg); }
+}

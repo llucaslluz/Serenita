@@ -1,0 +1,129 @@
+/* Configurações Globais e Fontes */
+body {
+    font-family: 'Lato', sans-serif;
+    background-color: #FAF9F7; /* Cor de fundo aproximada da imagem */
+    color: #5D4037; /* Cor de texto principal (marrom escuro) */
+    margin: 0;
+    /* Os doodles de fundo seriam adicionados aqui como múltiplas imagens de background, posicionadas de forma absoluta */
+}
+
+/* Utilitários */
+.section-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    text-align: center;
+    color: #3E2723;
+    margin-top: 60px;
+    margin-bottom: 40px;
+}
+
+/* Cabeçalho e Navegação */
+.main-header {
+    padding: 20px 5%;
+}
+
+.main-nav {
+    display: flex;
+    justify-content: flex-end; /* Alinha o menu à direita */
+    align-items: center;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #6D4C41; /* Cor dos links do menu */
+    font-size: 1rem;
+}
+
+.hamburger-menu {
+    display: flex; /* Na versão final, isso seria 'none' e apareceria apenas em telas menores */
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    margin-left: 30px;
+}
+
+.hamburger-menu span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #3E2723;
+}
+
+
+/* Seção Principal (Hero) */
+.hero {
+    text-align: center;
+    padding: 20px 0;
+}
+
+.logo {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.tagline {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    color: #3E2723;
+    margin-top: 0;
+    margin-bottom: 30px;
+}
+
+.hero-image {
+    max-width: 100%;
+    width: 300px;
+    border-radius: 50%;
+}
+
+
+/* Grid de Produtos */
+.features {
+    padding: 20px 5%;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 25px;
+}
+
+.product-card {
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+}
+
+.product-image {
+    max-width: 100%;
+    width: 150px;
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #3E2723;
+    margin: 0;
+}
+
+.product-price {
+    font-size: 1.1rem;
+    color: #5D4037;
+    margin-top: 5px;
+}
+
+/* Cores de fundo dos cards */
+.card-tradicional { background-color: #FBE9E7; }
+.card-triplo-chocolate { background-color: #E8F5E9; }
+.card-nutella { background-color: #FFFDE7; }
+.card-red-velvet { background-color: #FFEBEE; }
